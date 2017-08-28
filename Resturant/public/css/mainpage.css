@@ -1,0 +1,240 @@
+ /*Navigation bar*/
+ .navigationbar nav .glyphicon {
+    color: #bb0000;
+}
+
+/*carousel slide animation*/
+.animation{
+    padding-bottom: 50px;
+}
+
+/*Food Menu*/
+.menuFood{
+    padding-bottom: 50px;
+}
+.foodImage img{
+    width: 430px;
+    height: 350px;
+}
+
+/*Resturant Service*/
+.resturantService .image{
+    text-align: center;
+}
+.resturantService .title h4{
+    text-align: center;
+}
+.resturantService .description p{
+    font-size: 11px;
+    color: grey;
+    text-align: center;
+}
+.resturantService hr{
+    text-align: center;
+    border: 3px solid crimson;
+    width: 30px;
+}
+
+ /*Resturant service picture*/
+ .resturantServicePicture img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/*Resturant Footer*/
+
+.resturantFooter{
+    background-color: #1a1a1a;
+}
+.socialButton{
+    text-align: center;
+}
+.fa {
+    padding: 8px;
+    font-size: 40px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 30px 7px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+.menu-footer{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.menu-footer a{
+    margin: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+.menu-footer a:hover{
+    color: #a3c2c2;
+}
+.copyRight{
+    background-color: black;
+    height: 40px;
+    line-height: 40px;
+
+}
+.copyRight p{
+    color: white;
+    text-align: center;
+}
+
+/*Button Scroll back to top*/
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 50;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+#myBtn:hover {
+    background-color: #ff3333;
+}
+
+/*Contact Page*/
+ .contactImage{
+     width: 100%;
+     margin-top: -22px;
+     padding-bottom: 50px;
+ }
+ .contactImage img{
+     width: 100%;
+ }
+ .header h2{
+     text-align: center;
+     font-family: 'Poppins', sans-serif;
+ }
+ .header p{
+     text-align: center;
+     font-size: 11px;
+     color: grey;
+ }
+ .contact{
+     padding-bottom: 70px;
+ }
+ .contact form{
+    margin-top: 50px;
+ }
+ .form-group label{
+     font-size: 15px;
+     color: grey;
+ }
+ .followus{
+     margin-top: 50px;
+     text-align: center;
+ }
+ .followus hr{
+     border: 1px solid crimson;
+     text-align: center;
+     width: 70%;
+ }
+ .social .fa{
+     margin-top: -40px;
+     margin-bottom: 1px;
+ }
+ .followus .header{
+     font-size: 20px;
+     color: grey;
+ }
+ .followus .phone, .add, .time p{
+     font-size: 11px;
+ }
+ .followus span {
+    color: crimson;
+ }
+
+
+ /*Pizza Menu*/
+
+ .pizzaMenuImage{
+     width: 100%;
+     margin-top: -22px;
+     padding-bottom: 50px;
+ }
+ .pizzaMenuImage img{
+     width: 100%;
+ }
+ .menu{
+     margin-top: 100px;
+ }
+ .menu p{
+     font-size: 11px;
+     color: #999999;
+ }
+ .menu h4{
+     color: #000000;
+ }
+
+ /*about title*/
+ .menuImage{
+     width: 100%;
+     margin-top: -22px;
+     padding-bottom: 50px;
+ }
+ .menuImage img{
+     width: 100%;
+ }
+ .aboutTitle{
+     color: black;
+     text-align: center;
+ }
+ .aboutTitleDescription{
+     font-size: 13px;
+     color: grey;
+     text-align: center;
+     padding-bottom: 100px;
+ }
+ .aboutProfile{
+     border-top: 3px solid crimson;
+     border-bottom: 3px solid crimson;
+     box-shadow: 1px 1px 2px 2px gainsboro;
+ }
+ .aboutProfile:hover{
+     box-shadow: 2px 2px 6px 6px gainsboro;
+ }
+ .chefName{
+     background-color: gainsboro;
+     height: 150px;
+     margin-top: -100px;
+     opacity: 0.8;
+ }
+ .chefName h1, p{
+     color: black;
+     text-align: center;
+ }
