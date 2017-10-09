@@ -3,7 +3,7 @@
 
     @section('contents')
 
-        {{--Design for Caruosel Slide--}}
+        <!--Design for Caruosel Slide-->
         <div class="animation">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -18,15 +18,52 @@
                     <div class="carousel-inner" style="margin-top: -20px">
 
                         <div class="item active">
-                            <img src="{{asset('image/homepage/carousel1.png')}}" alt="carosel1" style="width:100%">
+                            <img src={{asset('image/slide/slide1.jpg')}} alt="carosel1" style="width:100%">
+
+                            <div class="slide-description">
+                                <h4 class="text-center">
+                                    From Our Chef
+                                </h4>
+                                <h1 class="text-center">
+                                    MEETING THE <br>
+                                    LEGEND
+                                </h1>
+                                <h3 class="text-center">
+                                    THE CALIFORNIA
+                                </h3>
+                            </div>
                         </div>
 
                         <div class="item">
-                            <img src="{{asset('image/homepage/carousel2.png')}}" alt="carosel1" style="width:100%">
+                            <img src={{asset('image/slide/slide2.jpg')}} alt="carosel2" style="width:100%">
+
+                            <div class="slide-description">
+                                <h4 class="text-center">
+                                    New Testing
+                                </h4>
+                                <h1 class="text-center">
+                                    THE PIZZA
+                                </h1>
+                                <h3 class="text-center">
+                                    WITH SEAFOOD
+                                </h3>
+                            </div>
                         </div>
 
                         <div class="item">
-                            <img src="{{asset('image/homepage/carousel3.png')}}" alt="carosel1" style="width:100%">
+                            <img src={{asset('image/slide/slide3.jpg')}} alt="carosel3" style="width:100%">
+
+                            <div class="slide-description">
+                                <h4 class="text-center">
+                                    Hot Stuff
+                                </h4>
+                                <h1 class="text-center">
+                                    BURGER
+                                </h1>
+                                <h3 class="text-center">
+                                    THE MEXICAN
+                                </h3>
+                            </div>
                         </div>
 
                     </div>
@@ -81,117 +118,86 @@
             </div>
         </div>
 
-        {{--Design for Food Menu--}}
+        <!--Design for Food Menu-->
         <div class="menuFood">
             <div class="container">
-
-                <div id="menuCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-
-                        <div class="item active">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 thumbnail">
-                                    <div class="foodImage">
-                                        <img class="img-responsive" src="{{ asset('image/homepage/menuSalad.png') }}">
-                                    </div>
-                                    <div class="foodName" style="text-align: center">
-                                        <h4>Salad</h4>
-                                    </div>
-                                    <div class="foodPrice"  style="text-align: center">
-                                        <h2 style="color: crimson">$7</h2>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 thumbnail">
-                                    <div class="foodImage">
-                                        <img class="img-responsive" src="{{ asset('image/homepage/menuDeserts.png') }}">
-                                    </div>
-                                    <div class="foodName"  style="text-align: center">
-                                        <h4>Desert</h4>
-                                    </div>
-                                    <div class="foodPrice"  style="text-align: center">
-                                        <h2 style="color: crimson">$3</h2>
-                                    </div>
-                                </div>
-
+                <div class="row">
+                    <div class="col-md-12 heroSlider-fixed">
+                        <div class="overlay"></div>
+                        <!-- Slider -->
+                        <div class="slider responsive">
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/burger5.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/burger6.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/burger8.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/burger7.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/burger4.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/burger9.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/burger1.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/burger2.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/burger3.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/desert1.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/desert2.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/desert3.png')}}">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="{{asset('image/homepage/desert4.png')}}">
                             </div>
                         </div>
-
-                        <div class="item ">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 thumbnail">
-                                    <div class="foodImage">
-                                        <img class="img-responsive" src="{{ asset('image/homepage/menuDrink.png') }}">
-                                    </div>
-                                    <div class="foodName" style="text-align: center">
-                                        <h4>Coca Cola</h4>
-                                    </div>
-                                    <div class="foodPrice"  style="text-align: center">
-                                        <h2 style="color: crimson">$1</h2>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 thumbnail">
-                                    <div class="foodImage">
-                                        <img class="img-responsive" src="{{ asset('image/homepage/menuDrink2.png') }}">
-                                    </div>
-                                    <div class="foodName"  style="text-align: center">
-                                        <h4>Cook-tail</h4>
-                                    </div>
-                                    <div class="foodPrice"  style="text-align: center">
-                                        <h2 style="color: crimson">$4</h2>
-                                    </div>
-                                </div>
-
-                            </div>
+                        <!-- control arrows -->
+                        <div class="prev">
+                            <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
                         </div>
-
-                        <div class="item ">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 thumbnail">
-                                    <div class="foodImage">
-                                        <img class="img-responsive" src="{{ asset('image/homepage/menuPizza.png') }}">
-                                    </div>
-                                    <div class="foodName" style="text-align: center">
-                                        <h4>Chess-Crust</h4>
-                                    </div>
-                                    <div class="foodPrice"  style="text-align: center">
-                                        <h2 style="color: crimson">$21</h2>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 thumbnail">
-                                    <div class="foodImage">
-                                        <img class="img-responsive" src="{{ asset('image/homepage/menuPizza2.png') }}">
-                                    </div>
-                                    <div class="foodName"  style="text-align: center">
-                                        <h4>Sea-Chess-Crust</h4>
-                                    </div>
-                                    <div class="foodPrice"  style="text-align: center">
-                                        <h2 style="color: crimson">$18</h2>
-                                    </div>
-                                </div>
-
-                            </div>
+                        <div class="next">
+                            <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
                         </div>
 
                     </div>
-
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#menuCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#menuCarousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-
-                </div> <!--end class carousel slide-->
-
-            </div> <!--end class container in menuFood-->
+                </div>
+            </div>
         </div> <!--end class menuFood-->
+
+        {{--parallax animation background--}}
+        <div class="parallax-animate">
+            <div class="animation-bg"></div>
+            <div class="text-bg">
+                <h2>
+                    <span style="color: red;letter-spacing: -5px">____________ </span>
+                    &nbsp;&nbsp;Free Delivery
+                    <span style="color: red; letter-spacing: -5px">____________ </span>
+                </h2>
+                <h1>SANDWICH DAY</h1>
+                <p>$3<small style="font-size: 40px">99</small> <br> <br>
+                    <span>
+                        <a href="{{url('/contactus')}}">
+                            <button class="btn btn-success btn-lg">Send Us Feedback</button>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
 
     @endsection
 

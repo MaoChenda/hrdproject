@@ -1,4 +1,5 @@
 @extends('UserPage.mainpage')
+@section('title', 'About')
 @section('contents')
 
     <!--image for menu page-->

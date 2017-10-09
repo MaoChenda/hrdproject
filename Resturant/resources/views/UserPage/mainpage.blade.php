@@ -4,19 +4,22 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Fast Food Resturant</title>
-
+        <title>@yield('title') | Fast Food Resturant</title>
+        <link rel="icon" type="image/png" href="{{asset('image/homepage/Chef_Logo.png')}}">
         <!-- Styles -->
-        <script src="{{asset('js/homepage.js')}}"></script>
         <script type="text/javascript" src="{{asset('bootstrap-3.3.7-dist/js/jquery-3.2.1.js')}}"></script>
         <script type="text/javascript" src="{{asset('bootstrap-3.3.7-dist/js/bootstrap.min.js')}}"></script>
-        <link rel="stylesheet" type="text/css" href="{{asset('bootstrap-3.3.7-dist/css/bootstrap.min.css')}}">
-        <link type="text/css" rel="stylesheet" href="{{asset('css/mainpage.css')}}">
+        <script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')}}"></script>
+        <script src="{{asset('//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')}}"></script>
+        <script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js')}}"></script>
 
+        <link rel="stylesheet" type="text/css" href="{{asset('bootstrap-3.3.7-dist/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.css">
+        <link type="text/css" rel="stylesheet" href="{{asset('css/mainpage.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{asset('css/app.css')}}">
         {{--Font style--}}
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-
         <!-- Google icon -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         {{--Social Media button--}}
@@ -27,8 +30,8 @@
     <body>
 
         {{--Design for Navigation Bar--}}
-        <div class="navigationbar">
-            <nav class="navbar navbar-inverse">
+        <div class="navigationbar" id="scroll-to-top">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
 
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -40,21 +43,37 @@
 
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{asset('/home page')}}"><span class="glyphicon glyphicon-home"></span> </a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">MENU <span class="glyphicon glyphicon-menu-down"></span></a>
+                        <li class="nav-item">
+                            <a class="navbar-link {{ Html::clever_link('homepage') }}" href="{{url('/homepage')}}">
+                                <span class="glyphicon glyphicon-home"></span>
+                            </a>
+                        </li>
+                        <li class=" nav-item dropdown">
+                            <a class=" navbar-link {{ Html::clever_link('pizzamenu') }} dropdown-toggle" data-toggle="dropdown" href="#">MENU
+                                <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{asset('/pizza menu')}}">PIZZAS</a></li>
-                                <li><a href="{{asset('/pizza menu')}}">BURGARS</a></li>
-                                <li><a href="{{asset('/pizza menu')}}">SALAD</a></li>
-                                <li><a href="{{asset('/pizza menu')}}">DRINKS</a></li>
-                                <li><a href="{{asset('/pizza menu')}}">DESERTS</a></li>
+                                <li><a href="{{url('/pizzamenu')}}">PIZZAS</a></li>
+                                <li><a href="{{url('/burgermenu')}}">BURGARS</a></li>
+                                <li><a href="{{url('/drinkmenu')}}">DRINKS</a></li>
+                                <li><a href="{{url('/desertmenu')}}">DESERTS</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{asset('/contact us')}}">CONTACT</a></li>
-                        <li><a href="{{asset('/about us')}}">ABOUT</a></li>
+                        <li class="nav-item">
+                            <a class="navbar-link {{ Html::clever_link('contactus') }}" href="{{url('/contactus')}}">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-link {{ Html::clever_link('aboutus') }}" href="{{url('/aboutus')}}">ABOUT</a>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart my-cart-icon">
+                                    <span class="badge badge-notify my-cart-badge"></span>
+                                </span> Your Cart
+                            </a>
+                        </li>
                         <li data-toggle="modal" data-target="#signUp">
                             <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
                         </li>
@@ -198,35 +217,25 @@
                         </div>
                     </div>
                 </div>
-
             </div> <!--end class container in resturantService-->
 
         </div> <!--end class resturantService-->
 
         {{--Design for Resturant Service Pictures--}}
-        <div class="resturantServicePicture">
+        <div class="resturantServicePicture ">
 
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" style="padding-bottom: 10px" >
-                        <img src="{{asset('image/homepage/resService1.PNG')}}" >
-                    </div>
+            <img src="{{asset('image/homepage/resService1.PNG')}}" id="img_service1">
 
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" style="padding-bottom: 10px" >
-                        <img src="{{asset('image/homepage/resService2.PNG')}}" >
-                    </div>
+            <img src="{{asset('image/homepage/resService2.PNG')}}" id="img_service2">
 
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" style="padding-bottom: 10px" >
-                        <img src="{{asset('image/homepage/resService3.PNG')}}" >
-                    </div>
+            <img src="{{asset('image/homepage/resService3.PNG')}}" id="img_service3">
 
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" style="padding-bottom: 10px" >
-                        <img src="{{asset('image/homepage/resService4.PNG')}}" >
-                    </div>
+            <img src="{{asset('image/homepage/resService4.PNG')}}" id="img_service4" >
 
-                </div>
-            </div>
+        </div>
 
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3908.760967354888!2d104.88850681440768!3d11.568985991786679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3109519febf30a53%3A0xd44ad2813dc1dc5c!2sRoyal+University+of+Phnom+Penh+(RUPP)%2C+Russian+Federation+Boulevard%2C%2C+Phnom+Penh!3m2!1d11.568985999999999!2d104.89069549999999!5e0!3m2!1sen!2skh!4v1504756546408" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
 
         {{--Design for Footer--}}
@@ -240,41 +249,26 @@
             </div>
             <div class="menu-footer">
                 <a href="#">PIZZAS</a>
-                <a href="#">SALAD</a>
-                <a href="#">HAMBURGERS</a> <br>
+                <a href="#">HAMBURGERS</a>
                 <a href="#">DRINKS</a>
                 <a href="#">DESERTS</a>
             </div>
-            <div class="copyRight">
-                <p>All Right Reserve &#169; 2017</p>
-            </div>
 
         </div> <!--end class resturantFooter-->
+        <div class="copyRight">
+            <p>All Right Reserve &#169; 2017</p>
+        </div>
 
         {{--Design for Button Scroll Back to Top--}}
+        <a href="#scroll-to-top">
         <button onclick="topFunction()" id="myBtn" title="Go to top">
             <i class="glyphicon glyphicon-chevron-up"></i>
         </button>
+        </a>
 
-        {{--Script for Button Scroll Back to Top--}}
-        <script>
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
 
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("myBtn").style.display = "block";
-                } else {
-                    document.getElementById("myBtn").style.display = "none";
-                }
-            }
-
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
+        <script src="{{mix('js/mainpage.js')}}" type="text/javascript"></script>
+        <script type='text/javascript' src="{{asset('js/jquery.mycart.js')}}"></script>
 
 
     </body>

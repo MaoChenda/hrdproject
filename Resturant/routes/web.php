@@ -13,10 +13,26 @@
 
 
 /*Route for home page of user*/
-Route:: get('/home page','UserController@homepage');
-Route::get('/contact us','UserController@contact');
-Route::get('/pizza menu','UserController@pizzamenu');
-Route::get('/about us','UserController@about');
+Route:: get('/homepage','UserController@homepage');
+Route::get('/contactus','UserController@contact');
+Route::get('/aboutus','UserController@about');
+Route::get('/pizzamenu','UserController@pizzamenu');
+Route::get('/burgermenu','UserController@burgermenu');
+Route::get('/drinkmenu','UserController@drinkmenu');
+Route::get('/desertmenu','UserController@desertmenu');
+Html::macro('clever_link', function ($route){
+    $path = Request::path();
+    $focus = "";
+
+    if ( $route == $path){
+        $focus = "active";
+    }
+    else{
+        $focus = "";
+    }
+    return $focus;
+
+});
 
 //Route for Authenticate
 Auth::routes();
@@ -24,7 +40,6 @@ Auth::routes();
 Route::get('/', function () {
     return view('AdminPage.welcome');
 });
-
 // admin homepage
 Route::get('/home', 'HomeController@index')->name('AdminPage.home');
 //form insert page

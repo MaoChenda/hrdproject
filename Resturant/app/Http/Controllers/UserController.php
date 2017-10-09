@@ -25,4 +25,16 @@ class UserController extends Controller
     {
         return view('UserPage.pizzaMenuPage');
     }
+    public function burgermenu()
+    {
+        return view('UserPage.BurgerMenuPage');
+    }
+    public function drinkmenu()
+    {
+        return view('UserPage.drinkMenuPage');
+    }
+    public function desertmenu()
+    {
+        return view('UserPage.desertMenuPage');
+    }
 }

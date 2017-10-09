@@ -1,4 +1,5 @@
 @extends('UserPage.mainpage')
+@section('title', 'Contact')
     @section('contents')
 
         <div class="contactImage">
